@@ -1,4 +1,0 @@
-selfdemo
-========
-
-For demo purposes.
