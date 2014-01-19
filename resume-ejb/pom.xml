@@ -54,6 +54,15 @@
         <version>2.3</version>
         <configuration>
           <ejbVersion>3.0</ejbVersion>
+          <generateClient>true</generateClient>
+		  <clientIncludes>
+		  	<clientInclude>
+		  		com/ejb/image/interfaces/local/**
+		  	</clientInclude>
+		  	<clientInclude>
+		  		com/ejb/image/interfaces/remote/**
+		  	</clientInclude>
+		  </clientIncludes>
         </configuration>
       </plugin>
 	   <plugin>
