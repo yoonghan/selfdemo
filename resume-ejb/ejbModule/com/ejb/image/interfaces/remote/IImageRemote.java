@@ -1,7 +1,12 @@
 package com.ejb.image.interfaces.remote;
 
-import com.ejb.image.interfaces.IImage;
+import javax.ejb.Remote;
 
-public interface IImageRemote extends IImage{
-
+@Remote(IImageRemote.class)
+public interface IImageRemote {
+	public boolean insertImage(String name,
+			String description, 
+			String location, 
+			String settings, 
+			String cUser);
 }

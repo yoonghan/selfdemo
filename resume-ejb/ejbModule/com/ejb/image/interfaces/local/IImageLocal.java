@@ -1,7 +1,12 @@
 package com.ejb.image.interfaces.local;
 
-import com.ejb.image.interfaces.IImage;
+import javax.ejb.Local;
 
-public interface IImageLocal extends IImage{
-
+@Local(IImageLocal.class)
+public interface IImageLocal {
+	public boolean insertImage(String name,
+			String description, 
+			String location, 
+			String settings, 
+			String cUser);
 }
