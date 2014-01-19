@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.jboss.ide.eclipse.as.core.singledeployable.deployableList=EarContent/META-INF/application.xml\nsrc/main/webapp/WEB-INF/web.xml\npom.xml\nsrc/main/java/com/image/v1/html/bo\npom.xml\nsrc/main/webapp/WEB-INF/web.xml\n

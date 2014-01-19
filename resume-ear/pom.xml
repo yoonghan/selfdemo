@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.han</groupId>
+  <artifactId>resume-ear</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>ear</packaging>
+  <name>resume-ear</name>
+  <description>Image Ear file</description>
+  <!-- include ejbs -->
+  <dependencies>
+        <dependency>
+            <groupId>com.han</groupId>
+            <artifactId>resume-ejb</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>ejb</type>
+            <scope>runtime</scope>
+        </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <earSourceDirectory>EarContent</earSourceDirectory>
+          <generateApplicationXml>false</generateApplicationXml>
+          <version>5</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <!-- rebranding ejbs -->
+          <modules>
+	          <ejbModule>
+	              <groupId>com.han</groupId>
+	              <artifactId>resume-ejb</artifactId>
+	              <bundleFileName>resume-ejb.jar</bundleFileName>
+	          </ejbModule>
+          </modules>
+          <artifactTypeMappings>
+               <artifactTypeMapping type="ejb-client" mapping="jar" />
+           </artifactTypeMappings>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
